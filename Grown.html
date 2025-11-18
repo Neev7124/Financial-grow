@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial-Growth - Finance Dashboard</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif,Arial, Helvetica,initial;
+    }
+
+    body {
+      background-color: #0b1622;
+      color: white;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav {
+      background-color: #101d2f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav img {
+      height: 45px;
+    }
+
+    .nav li {
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .nav li:hover {
+      color: #3b82f6;
+      transform: scale(1.1); 
+    }
+
+    .searchbar input[type="text"] {
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      width: 250px;
+      font-size: 14px;
+    }
+
+    .login input {
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease; 
+    }
+
+    .login input:hover {
+      background-color: #2563eb;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      margin: 60px 0 40px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #3b82f6;
+      transition: 0.4s ease; 
+    }
+
+    .hero h1:hover {
+      transform: scale(1.05);
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .stock-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding-bottom: 50px;
+    }
+
+    .card {
+      background-color: #13243a;
+      width: 280px;
+      height: 200px;
+      border-radius: 15px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s ease; 
+    }
+
+    .card:hover {
+      transform: translateY(-8px); 
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4); 
+    }
+
+    .card h2 {
+      margin-bottom: 8px;
+      font-size: 22px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .change {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .green {
+      color: #22c55e;
+    }
+
+    .red {
+      color: #ef4444;
+    }
+    footer {
+      background-color: #101d2f;
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    footer span {
+      color: #3b82f6;
+    }
+    #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* keeps it behind everything */
+    opacity: 0.4; /* adjust brightness */
+    }
+
+  </style>
+</head>
+
+<body>
+  <div>
+    <video id="bg-video" autoplay muted loop src="14684009_3840_2160_30fps.mp4"></video>
+  </div>
+  <div class="nav">
+    <ul>
+      <a href="/Grown.html"><img src="https://cdn-icons-png.flaticon.com/512/5109/5109817.png" /></a>
+      <li><a href="/stocks.html">Stocks</a></li>
+      <li><a href="#">F&O</a></li>
+      <li><a href="#">Mutual Funds</a></li>
+      <li><a href="#">Crypto</a></li>
+      <li><a href="#">More</a></li>
+    </ul>
+
+    <div class="searchbar">
+      <input type="text" placeholder="Search stocks, funds, crypto..." />
+      <label class="login"><input type="button" value="Login" /></label>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>Financial-Growth</h1>
+    <p>Your one-stop hub for smart investments and market insights.</p>
+  </div>
+
+  <div class="stock-section">
+    <div class="card"><h2>Apple Inc</h2><p class="price">$150.25</p><p class="change green">+1.2%</p></div>
+    <div class="card"><h2>Microsoft Corp</h2><p class="price">$250.75</p><p class="change red">-0.8%</p></div>
+    <div class="card"><h2>Amazon.com Inc</h2><p class="price">$3300.50</p><p class="change green">+2.5%</p></div>
+    <div class="card"><h2>Tesla Motors</h2><p class="price">$780.30</p><p class="change red">-0.3%</p></div>
+    <div class="card"><h2>Google LLC</h2><p class="price">$2725.10</p><p class="change green">+1.8%</p></div>
+    <div class="card"><h2>Netflix</h2><p class="price">$410.40</p><p class="change green">+1.1%</p></div>
+    <div class="card"><h2>Meta Platforms</h2><p class="price">$330.15</p><p class="change green">+0.9%</p></div>
+    <div class="card"><h2>Nvidia</h2><p class="price">$980.20</p><p class="change green">+3.2%</p></div>
+    <div class="card"><h2>Samsung</h2><p class="price">$1350.80</p><p class="change red">-1.0%</p></div>
+    <div class="card"><h2>Intel Corp</h2><p class="price">$44.90</p><p class="change red">-0.5%</p></div>
+    <div class="card"><h2>IBM</h2><p class="price">$142.70</p><p class="change green">+0.4%</p></div>
+    <div class="card"><h2>Cisco</h2><p class="price">$52.10</p><p class="change green">+1.9%</p></div>
+    <div class="card"><h2>Zoom</h2><p class="price">$68.50</p><p class="change red">-2.0%</p></div>
+    <div class="card"><h2>Adobe</h2><p class="price">$590.20</p><p class="change green">+1.7%</p></div>
+
+  </div>
+</body>
+</html>
